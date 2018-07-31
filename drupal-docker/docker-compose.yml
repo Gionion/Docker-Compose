@@ -1,4 +1,3 @@
-# Usage: docker-compose up -d
 version: "3.6"
 services:
 
@@ -7,11 +6,11 @@ services:
     #volumes:
     #  - /var/lib/postgresql
     ports:
-        - "8081:5432"   
+      - "8081:5432"   
     environment:
-        POSTGRES_USER: test
-        POSTGRES_PASSWORD: test
-        POSTGRES_DB: test
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: test
     restart: always
 
   drupal:
