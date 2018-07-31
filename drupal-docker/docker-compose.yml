@@ -17,10 +17,10 @@ services:
     image: drupal:latest
     ports:
       - "8080:80"
-    #volumes:
-    #  - /var/www/html/modules
-    #  - /var/www/html/profiles
-    #  - /var/www/html/themes
+    volumes:
+      - /var/www/html/modules
+      - /var/www/html/profiles
+      - /var/www/html/themes
     depends_on:
       - "postgres"
     restart:  "always"
