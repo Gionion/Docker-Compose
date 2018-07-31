@@ -1,0 +1,28 @@
+# Usage: docker-compose up -d
+version: "3.6"
+services:
+
+  postgres:
+    image: postgres:latest
+    #volumes:
+    #  - /var/lib/postgresql
+    ports:
+        - "8081:5432"   
+    environment:
+        POSTGRES_USER: test
+        POSTGRES_PASSWORD: test
+        POSTGRES_DB: test
+    restart: always
+
+  drupal:
+    image: drupal:latest
+    ports:
+      - "8080:80"
+    #volumes:
+    #  - /var/www/html/modules
+    #  - /var/www/html/profiles
+    #  - /var/www/html/themes
+    depends_on:
+      - "postgres"
+    restart:  "always"
+
