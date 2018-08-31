@@ -3,7 +3,7 @@
 ### 1. Clone this repo
 
 ```
-git clone github.com/Gionion/Docker-Compose.git
+git clone https://github.com/Gionion/Docker-Compose.git
 cd drupal-docker
 ```
 
